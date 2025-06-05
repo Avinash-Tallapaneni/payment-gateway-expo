@@ -9,8 +9,6 @@ buildscript {
     classpath('com.android.tools.build:gradle')
     classpath('com.facebook.react:react-native-gradle-plugin')
     classpath('org.jetbrains.kotlin:kotlin-gradle-plugin')
-        compile project(':react-native-upi-payment')
-
   }
 }
 
@@ -25,6 +23,12 @@ def reactNativeAndroidDir = new File(
 allprojects {
   repositories {
     maven {
+     url "https://phonepe.mycloudrepo.io/public/repositories/phonepe-intentsdk-android"
+    }
+    maven {
+  url "https://phonepe.mycloudrepo.io/public/repositories/phonepe-intentsdk-android"
+}
+    maven {
       // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
       url(reactNativeAndroidDir)
     }
@@ -32,10 +36,6 @@ allprojects {
     google()
     mavenCentral()
     maven { url 'https://www.jitpack.io' }
-    maven {
-    url "https://phonepe.mycloudrepo.io/public/repositories/phonepe-intentsdk-android"
-}
-
   }
 }
 
