@@ -1,4 +1,3 @@
-import { key } from "@/constants/env";
 import { useState } from "react";
 import {
   Alert,
@@ -61,7 +60,7 @@ export default function RazorpayScreen() {
     let options = {
       description: "`${totalItems} item(s)`",
       currency: "INR",
-      key: key,
+      key: process.env.EXPO_PUBLIC_RAZORPAY_KEY || "",
       amount: totalAmount,
       name: "SimpleCart",
       order_id: "",
@@ -72,8 +71,6 @@ export default function RazorpayScreen() {
       },
       theme: { color: "#6366f1" },
     };
-
-    console.log("options", options);
 
     RazorpayCheckout.open(options)
       .then((data) => {

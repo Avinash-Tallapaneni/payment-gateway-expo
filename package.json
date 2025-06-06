@@ -11,7 +11,9 @@
     "lint": "expo lint",
     "prebuild": "expo prebuild",
     "build:android:debug": "npm run prebuild && cd android && ./gradlew assembleDebug",
-    "build:android:release": "npm run prebuild && cd android && ./gradlew assembleRelease"
+    "build:android:release": "npm run prebuild && cd android && ./gradlew assembleRelease",
+    "build:android:debug:windows": "npm run prebuild && cd android && gradlew.bat assembleDebug",
+    "build:android:expo": "eas build -p android --profile preview"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
@@ -35,6 +37,7 @@
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-native": "0.79.2",
+    "react-native-dotenv": "^3.4.11",
     "react-native-element-dropdown": "^2.12.4",
     "react-native-gesture-handler": "~2.24.0",
     "react-native-phonepe-pg": "^3.0.1",
