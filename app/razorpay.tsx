@@ -1,3 +1,4 @@
+import Constants from "expo-constants";
 import { useState } from "react";
 import {
   Alert,
@@ -52,7 +53,6 @@ export default function RazorpayScreen() {
   const totalItems = Object.values(cart).reduce((a, b) => a + b, 0);
 
   const handlePayment = () => {
-    console.log("razorpay", process.env.EXPO_PUBLIC_RAZORPAY_KEY);
     if (totalAmount === 0) {
       Alert.alert("Cart Empty", "Add some products first.");
       return;
@@ -61,7 +61,7 @@ export default function RazorpayScreen() {
     let options = {
       description: "`${totalItems} item(s)`",
       currency: "INR",
-      key: process.env.EXPO_PUBLIC_RAZORPAY_KEY || "",
+      key: Constants.expoConfig?.extra?.env?.EXPO_PUBLIC_RAZORPAY_KEY || "",
       amount: totalAmount,
       name: "SimpleCart",
       order_id: "",
