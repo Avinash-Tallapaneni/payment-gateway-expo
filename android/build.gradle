@@ -26,9 +26,6 @@ allprojects {
      url "https://phonepe.mycloudrepo.io/public/repositories/phonepe-intentsdk-android"
     }
     maven {
-  url "https://phonepe.mycloudrepo.io/public/repositories/phonepe-intentsdk-android"
-}
-    maven {
       // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
       url(reactNativeAndroidDir)
     }

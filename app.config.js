@@ -48,6 +48,15 @@ const config = {
   experiments: {
     typedRoutes: true,
   },
+
+  extra: {
+    eas: {
+      projectId: "68cf106b-5676-49e8-8c05-13121f5b1d0a",
+    },
+    env: {
+      EXPO_PUBLIC_RAZORPAY_KEY: process.env.EXPO_PUBLIC_RAZORPAY_KEY,
+    },
+  },
 };
 
 module.exports = withPhonePe(config);
