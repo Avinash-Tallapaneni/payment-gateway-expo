@@ -11,7 +11,7 @@
     "preview": {
       "distribution": "internal",
       "env": {
-        "EXPO_PUBLIC_RAZORPAY_KEY": "{{RAZORPAY_KEY}}"
+        "EXPO_PUBLIC_RAZORPAY_KEY": "EXPO_PUBLIC_RAZORPAY_KEY"
       }
     },
     "production": {

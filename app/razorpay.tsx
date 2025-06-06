@@ -52,6 +52,7 @@ export default function RazorpayScreen() {
   const totalItems = Object.values(cart).reduce((a, b) => a + b, 0);
 
   const handlePayment = () => {
+    console.log("razorpay", process.env.EXPO_PUBLIC_RAZORPAY_KEY);
     if (totalAmount === 0) {
       Alert.alert("Cart Empty", "Add some products first.");
       return;
